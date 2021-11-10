@@ -1,0 +1,46 @@
+﻿@model IList<FirstCoreApp.Models.PostViewModel>
+@{ ViewData["title"] = "HomePage";
+       }
+<div class="row">
+    <h2> POSTLIST</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    PostID
+                </th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Author
+                </th>
+            </tr>
+
+        </thead>
+        <tbody >
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(Modelitem => item.postId)
+                </td>
+                <td>
+                    @Html.DisplayFor(Modelitem => item.title)
+                </td>
+                <td>
+                    @Html.DisplayFor(Modelitem => item.description)
+                </td>
+                <td>
+                    @Html.DisplayFor(Modelitem => item.author)
+                </td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+
+</div>
